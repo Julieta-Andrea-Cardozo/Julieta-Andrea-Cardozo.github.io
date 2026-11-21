@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Julieta Cardozo | Desarrolladora Frontend</title>
+    <meta
+      name="description"
+      content="Portfolio de Julieta Cardozo, desarrolladora frontend de Salta. Proyectos con React, JavaScript, HTML, CSS, Bootstrap y PHP."
+    />
+    <meta property="og:title" content="Julieta Cardozo | Desarrolladora Frontend" />
+    <meta
+      property="og:description"
+      content="Portfolio de Julieta Cardozo, desarrolladora frontend de Salta. Proyectos con React, JavaScript, HTML, CSS, Bootstrap y PHP."
+    />
+    <meta property="og:image" content="https://julieta-andrea-cardozo.github.io/img/boxly-ordenes.jpg" />
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+    <header class="nav">
+      <div class="container nav__inner">
+        <a class="nav__brand" href="#inicio">Julieta Cardozo</a>
+        <nav aria-label="Principal">
+          <ul class="nav__links">
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <section id="inicio" class="hero">
+        <div class="container hero__inner">
+          <div class="hero__text">
+            <p class="eyebrow">Salta, Argentina</p>
+            <h1>Hola, soy Julieta Cardozo</h1>
+            <p class="hero__role">Desarrolladora Frontend · React · JavaScript</p>
+            <p class="hero__lead">
+              Estudio la Tecnicatura Superior en Análisis de Sistemas y construyo interfaces web
+              claras, accesibles y que se ven bien en el celular.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="cv/Cardozo_Julieta_CV.pdf" download>Descargar CV (PDF)</a>
+              <a class="btn" href="#proyectos">Ver proyectos</a>
+            </div>
+          </div>
+          <img
+            class="hero__photo"
+            src="img/julieta.jpg"
+            width="480"
+            height="480"
+            alt="Foto de Julieta Cardozo, con anteojos y remera negra"
+          />
+        </div>
+      </section>
+
+      <section id="sobre-mi" class="section">
+        <div class="container narrow">
+          <h2>Sobre mí</h2>
+          <p>
+            Soy estudiante de la Tecnicatura Superior en Análisis de Sistemas en el IES N° 6.001 de
+            Salta. Me enfoco en el frontend: maqueto con HTML semántico y CSS, programo con
+            JavaScript moderno y armo aplicaciones con React y Tailwind CSS.
+          </p>
+          <p>
+            Trabajé en equipo con Scrum en <strong>Boxly</strong>, un sistema de gestión para
+            talleres mecánicos, donde desarrollé los módulos de clientes, vehículos, agenda y turnos
+            y los conecté a una API REST. Me importa que las interfaces sean fáciles de usar,
+            accesibles y rápidas.
+          </p>
+        </div>
+      </section>
+
+      <section id="proyectos" class="section section--alt">
+        <div class="container">
+          <h2>Proyectos</h2>
+          <div class="projects">
+            <article class="project">
+              <img
+                src="img/boxly-ordenes.jpg"
+                width="1200"
+                height="750"
+                loading="lazy"
+                alt="Tablero de órdenes de Boxly con columnas por etapa y tarjetas de cada auto con patente, cliente y mecánico"
+              />
+              <div class="project__body">
+                <h3>Boxly: gestión de taller mecánico</h3>
+                <p>
+                  Sistema web para talleres: clientes, vehículos, órdenes de trabajo, repuestos,
+                  turnos, cobros con Mercado Pago y portal para el cliente. Proyecto grupal de 4
+                  personas con Scrum en sprints de 2 semanas.
+                </p>
+                <p class="project__role">
+                  <strong>Mi rol:</strong> Frontend. Desarrollé los módulos de clientes, vehículos,
+                  agenda y turnos, el autocompletado por patente, las fotos e historial de las
+                  órdenes, y conecté el login y la sesión con la API.
+                </p>
+                <ul class="tags" aria-label="Tecnologías">
+                  <li>React 18</li>
+                  <li>Vite</li>
+                  <li>Tailwind CSS</li>
+                  <li>FastAPI</li>
+                  <li>PostgreSQL</li>
+                  <li>JWT</li>
+                </ul>
+                <div class="project__links">
+                  <a href="https://github.com/Antony27c/Boxly" target="_blank" rel="noopener">Repositorio</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project">
+              <img
+                src="img/barismo.jpg"
+                width="1200"
+                height="750"
+                loading="lazy"
+                alt="Página de inicio de Barismo y Café con el título El café como disciplina y tazas de café con arte latte"
+              />
+              <div class="project__body">
+                <h3>Barismo &amp; Café</h3>
+                <p>
+                  Sitio de una cafetería de especialidad con 10 vistas: menú, galería de arte latte,
+                  talleres, tienda con carrito y contacto. Luego lo migré a PHP con MySQL, login,
+                  roles y un panel de administración.
+                </p>
+                <p class="project__role">
+                  <strong>Mi rol:</strong> Proyecto individual. Diseñé los wireframes en Figma,
+                  maqueté las vistas y logré 100/100 en accesibilidad con Lighthouse.
+                </p>
+                <ul class="tags" aria-label="Tecnologías">
+                  <li>HTML5</li>
+                  <li>CSS3</li>
+                  <li>Bootstrap 5</li>
+                  <li>JavaScript</li>
+                  <li>PHP</li>
+                  <li>MySQL</li>
+                </ul>
+                <div class="project__links">
+                  <a href="https://github.com/Julieta-Andrea-Cardozo/programacion_WEB" target="_blank" rel="noopener">Repositorio</a>
+                  <a href="https://julieta-andrea-cardozo.github.io/programacion_WEB/" target="_blank" rel="noopener">Demo</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project">
+              <img
+                src="img/tp4.jpg"
+                width="1200"
+                height="750"
+                loading="lazy"
+                alt="Pokédex con tarjetas de Pokémon que muestran imagen, número y tipo, obtenidas de la PokéAPI"
+              />
+              <div class="project__body">
+                <h3>Mini apps con JavaScript</h3>
+                <p>
+                  Tres aplicaciones interactivas: un catálogo con 4 filtros combinados en tiempo
+                  real, una lista de tareas con contador y una Pokédex que consume la PokéAPI con
+                  búsqueda y manejo de errores.
+                </p>
+                <p class="project__role">
+                  <strong>Mi rol:</strong> Proyecto individual. Programé toda la lógica con
+                  JavaScript ES6+, Fetch API y async/await.
+                </p>
+                <ul class="tags" aria-label="Tecnologías">
+                  <li>JavaScript ES6+</li>
+                  <li>Fetch API</li>
+                  <li>HTML5</li>
+                  <li>CSS Grid</li>
+                </ul>
+                <div class="project__links">
+                  <a href="https://github.com/Julieta-Andrea-Cardozo/trabajo-practico-N4" target="_blank" rel="noopener">Repositorio</a>
+                  <a href="https://julieta-andrea-cardozo.github.io/trabajo-practico-N4/" target="_blank" rel="noopener">Demo</a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <section id="habilidades" class="section">
+        <div class="container narrow">
+          <h2>Habilidades</h2>
+          <ul class="skills">
+            <li>HTML5 semántico</li>
+            <li>CSS3 (Flexbox, Grid)</li>
+            <li>JavaScript ES6+</li>
+            <li>React</li>
+            <li>Tailwind CSS</li>
+            <li>Bootstrap 5</li>
+            <li>PHP</li>
+            <li>MySQL / PostgreSQL</li>
+            <li>APIs REST</li>
+            <li>Git y GitHub</li>
+            <li>Figma</li>
+            <li>Accesibilidad web</li>
+            <li>Scrum y Trello</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contacto" class="section section--alt">
+        <div class="container narrow contact">
+          <h2>Contacto</h2>
+          <p>¿Tenés una propuesta o querés charlar sobre un proyecto? Escribime.</p>
+          <ul class="contact__list">
+            <li><span>Email</span><a href="mailto:julietacardozo764@gmail.com">julietacardozo764@gmail.com</a></li>
+            <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/julieta-cardozo" target="_blank" rel="noopener">linkedin.com/in/julieta-cardozo</a></li>
+            <li><span>GitHub</span><a href="https://github.com/Julieta-Andrea-Cardozo" target="_blank" rel="noopener">github.com/Julieta-Andrea-Cardozo</a></li>
+          </ul>
+          <a class="btn btn--primary" href="cv/Cardozo_Julieta_CV.pdf" download>Descargar CV (PDF)</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">© 2026 Julieta Cardozo</div>
+    </footer>
+  </body>
+</html>
