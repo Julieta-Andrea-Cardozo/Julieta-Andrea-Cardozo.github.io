@@ -1,62 +1,110 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Julieta Cardozo | Desarrolladora Frontend</title>
     <meta
       name="description"
-      content="Portfolio de Julieta Cardozo, desarrolladora frontend de Salta. Proyectos con React, JavaScript, HTML, CSS, Bootstrap y PHP."
+      content="Portfolio de Julieta Cardozo, desarrolladora frontend de Salta. Proyectos con React, JavaScript, HTML, CSS, Tailwind, Bootstrap y PHP."
     />
     <meta property="og:title" content="Julieta Cardozo | Desarrolladora Frontend" />
     <meta
       property="og:description"
-      content="Portfolio de Julieta Cardozo, desarrolladora frontend de Salta. Proyectos con React, JavaScript, HTML, CSS, Bootstrap y PHP."
+      content="Portfolio de Julieta Cardozo, desarrolladora frontend de Salta. Proyectos con React, JavaScript, HTML, CSS, Tailwind, Bootstrap y PHP."
     />
     <meta property="og:image" content="https://julieta-andrea-cardozo.github.io/img/boxly-ordenes.jpg" />
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Sora', 'sans-serif'],
+            },
+            colors: {
+              ink: '#0f172a',
+              brand: '#7c3aed',
+              branddark: '#5b21b6',
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .hero-photo { mask-image: none; }
+      @media (prefers-reduced-motion: no-preference) {
+        .fade-in { animation: fadeIn .6s ease both; }
+      }
+      @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+    </style>
   </head>
-  <body>
-    <a class="skip" href="#contenido">Saltar al contenido</a>
-    <header class="nav">
-      <div class="container nav__inner">
-        <a class="nav__brand" href="#inicio">Julieta Cardozo</a>
+  <body class="bg-slate-950 text-slate-200 font-sans antialiased">
+    <a
+      href="#contenido"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:bg-brand focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:z-50"
+      >Saltar al contenido</a
+    >
+
+    <header class="sticky top-0 z-40 border-b border-white/10 bg-slate-950/80 backdrop-blur">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
+        <a href="#inicio" class="font-display text-lg font-bold tracking-tight text-white">
+          Julieta<span class="text-brand">.</span>Cardozo
+        </a>
         <nav aria-label="Principal">
-          <ul class="nav__links">
-            <li><a href="#sobre-mi">Sobre mí</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#habilidades">Habilidades</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+          <ul class="flex gap-5 text-sm font-medium text-slate-300">
+            <li><a class="transition hover:text-white" href="#proyectos">Proyectos</a></li>
+            <li><a class="transition hover:text-white" href="#habilidades">Habilidades</a></li>
+            <li><a class="transition hover:text-white" href="#contacto">Contacto</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
     <main id="contenido">
-      <section id="inicio" class="hero">
-        <div class="container hero__inner">
-          <div class="hero__text">
-            <p class="eyebrow">Salta, Argentina</p>
-            <h1>Hola, soy Julieta Cardozo</h1>
-            <p class="hero__role">Desarrolladora Frontend · React · JavaScript</p>
-            <p class="hero__lead">
-              Estudio la Tecnicatura Superior en Análisis de Sistemas y construyo interfaces web
-              claras, accesibles y que se ven bien en el celular.
+      <section id="inicio" class="relative overflow-hidden">
+        <div
+          aria-hidden="true"
+          class="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_50%_at_50%_0%,rgba(124,58,237,0.25),transparent)]"
+        ></div>
+        <div class="mx-auto grid max-w-6xl items-center gap-10 px-5 py-20 sm:py-28 lg:grid-cols-[1.2fr_1fr]">
+          <div class="fade-in">
+            <p class="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-300">
+              <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+              Salta, Argentina · Disponible para mi primera experiencia
             </p>
-            <div class="hero__actions">
-              <a class="btn btn--primary" href="cv/Cardozo_Julieta_CV.pdf" download>Descargar CV (PDF)</a>
-              <a class="btn" href="#proyectos">Ver proyectos</a>
+            <h1 class="font-display text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+              Julieta Cardozo
+              <span class="block bg-gradient-to-r from-brand to-fuchsia-400 bg-clip-text text-transparent">Desarrolladora Frontend</span>
+            </h1>
+            <p class="mt-6 max-w-xl text-lg leading-relaxed text-slate-400">
+              Estudio la Tecnicatura Superior en Análisis de Sistemas y construyo interfaces web
+              claras, accesibles y que se ven bien en el celular, con React, JavaScript y Tailwind CSS.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a
+                class="rounded-xl bg-brand px-6 py-3 font-semibold text-white shadow-lg shadow-brand/30 transition hover:bg-branddark"
+                href="cv/Cardozo_Julieta_CV.pdf"
+                download
+                >Descargar CV (PDF)</a
+              >
+              <a
+                class="rounded-xl border border-white/15 bg-white/5 px-6 py-3 font-semibold text-slate-200 transition hover:bg-white/10"
+                href="#proyectos"
+                >Ver proyectos</a
+              >
             </div>
           </div>
           <img
-            class="hero__photo"
+            class="mx-auto w-56 rounded-3xl border border-white/10 object-cover shadow-2xl shadow-brand/20 sm:w-72"
             src="img/julieta.jpg"
             width="480"
             height="480"
@@ -65,16 +113,16 @@
         </div>
       </section>
 
-      <section id="sobre-mi" class="section">
-        <div class="container narrow">
-          <h2>Sobre mí</h2>
-          <p>
+      <section id="sobre-mi" class="border-t border-white/5">
+        <div class="mx-auto max-w-3xl px-5 py-16 sm:py-20">
+          <h2 class="font-display text-3xl font-bold text-white">Sobre mí</h2>
+          <p class="mt-5 leading-relaxed text-slate-400">
             Soy estudiante de la Tecnicatura Superior en Análisis de Sistemas en el IES N° 6.001 de
             Salta. Me enfoco en el frontend: maqueto con HTML semántico y CSS, programo con
             JavaScript moderno y armo aplicaciones con React y Tailwind CSS.
           </p>
-          <p>
-            Trabajé en equipo con Scrum en <strong>Boxly</strong>, un sistema de gestión para
+          <p class="mt-4 leading-relaxed text-slate-400">
+            Trabajé en equipo con Scrum en <strong class="text-slate-200">Boxly</strong>, un sistema de gestión para
             talleres mecánicos, donde desarrollé los módulos de clientes, vehículos, agenda y turnos
             y los conecté a una API REST. Me importa que las interfaces sean fáciles de usar,
             accesibles y rápidas.
@@ -82,151 +130,199 @@
         </div>
       </section>
 
-      <section id="proyectos" class="section section--alt">
-        <div class="container">
-          <h2>Proyectos</h2>
-          <div class="projects">
-            <article class="project">
+      <section id="proyectos" class="border-t border-white/5 bg-slate-900/40">
+        <div class="mx-auto max-w-6xl px-5 py-16 sm:py-20">
+          <h2 class="font-display text-3xl font-bold text-white">Proyectos</h2>
+          <p class="mt-2 text-slate-400">Lo que construí, solo y en equipo.</p>
+
+          <div class="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <article class="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-slate-900 shadow-xl transition hover:border-brand/50">
               <img
+                class="h-48 w-full object-cover transition duration-300 group-hover:scale-[1.02]"
                 src="img/boxly-ordenes.jpg"
                 width="1200"
                 height="750"
                 loading="lazy"
                 alt="Tablero de órdenes de Boxly con columnas por etapa y tarjetas de cada auto con patente, cliente y mecánico"
               />
-              <div class="project__body">
-                <h3>Boxly: gestión de taller mecánico</h3>
-                <p>
+              <div class="flex flex-1 flex-col p-6">
+                <h3 class="font-display text-xl font-bold text-white">Boxly: gestión de taller mecánico</h3>
+                <p class="mt-3 text-sm leading-relaxed text-slate-400">
                   Sistema web para talleres: clientes, vehículos, órdenes de trabajo, repuestos,
                   turnos, cobros con Mercado Pago y portal para el cliente. Proyecto grupal de 4
                   personas con Scrum en sprints de 2 semanas.
                 </p>
-                <p class="project__role">
-                  <strong>Mi rol:</strong> Frontend. Desarrollé los módulos de clientes, vehículos,
+                <p class="mt-3 text-sm text-slate-400">
+                  <strong class="text-slate-200">Mi rol:</strong> Frontend. Desarrollé los módulos de clientes, vehículos,
                   agenda y turnos, el autocompletado por patente, las fotos e historial de las
                   órdenes, y conecté el login y la sesión con la API.
                 </p>
-                <ul class="tags" aria-label="Tecnologías">
-                  <li>React 18</li>
-                  <li>Vite</li>
-                  <li>Tailwind CSS</li>
-                  <li>FastAPI</li>
-                  <li>PostgreSQL</li>
-                  <li>JWT</li>
+                <ul class="mt-4 flex flex-wrap gap-2" aria-label="Tecnologías">
+                  <li class="rounded-full bg-white/5 px-3 py-1 text-xs font-medium text-brand">React 18</li>
+                  <li class="rounded-full bg-white/5 px-3 py-1 text-xs font-medium text-brand">Vite</li>
+                  <li class="rounded-full bg-white/5 px-3 py-1 text-xs font-medium text-brand">Tailwind CSS</li>
+                  <li class="rounded-full bg-white/5 px-3 py-1 text-xs font-medium text-brand">FastAPI</li>
+                  <li class="rounded-full bg-white/5 px-3 py-1 text-xs font-medium text-brand">PostgreSQL</li>
+                  <li class="rounded-full bg-white/5 px-3 py-1 text-xs font-medium text-brand">JWT</li>
                 </ul>
-                <div class="project__links">
-                  <a href="https://github.com/Antony27c/Boxly" target="_blank" rel="noopener">Repositorio</a>
+                <div class="mt-6 flex gap-3">
+                  <a
+                    class="inline-flex items-center gap-1 rounded-lg border border-white/15 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:bg-white/10"
+                    href="https://github.com/Antony27c/Boxly"
+                    target="_blank"
+                    rel="noopener"
+                    >Repositorio</a
+                  >
                 </div>
               </div>
             </article>
 
-            <article class="project">
+            <article class="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-slate-900 shadow-xl transition hover:border-brand/50">
               <img
+                class="h-48 w-full object-cover transition duration-300 group-hover:scale-[1.02]"
                 src="img/barismo.jpg"
                 width="1200"
                 height="750"
                 loading="lazy"
                 alt="Página de inicio de Barismo y Café con el título El café como disciplina y tazas de café con arte latte"
               />
-              <div class="project__body">
-                <h3>Barismo &amp; Café</h3>
-                <p>
+              <div class="flex flex-1 flex-col p-6">
+                <h3 class="font-display text-xl font-bold text-white">Barismo &amp; Café</h3>
+                <p class="mt-3 text-sm leading-relaxed text-slate-400">
                   Sitio de una cafetería de especialidad con 10 vistas: menú, galería de arte latte,
                   talleres, tienda con carrito y contacto. Luego lo migré a PHP con MySQL, login,
                   roles y un panel de administración.
                 </p>
-                <p class="project__role">
-                  <strong>Mi rol:</strong> Proyecto individual. Diseñé los wireframes en Figma,
+                <p class="mt-3 text-sm text-slate-400">
+                  <strong class="text-slate-200">Mi rol:</strong> Proyecto individual. Diseñé los wireframes en Figma,
                   maqueté las vistas y logré 100/100 en accesibilidad con Lighthouse.
                 </p>
-                <ul class="tags" aria-label="Tecnologías">
-                  <li>HTML5</li>
-                  <li>CSS3</li>
-                  <li>Bootstrap 5</li>
-                  <li>JavaScript</li>
-                  <li>PHP</li>
-                  <li>MySQL</li>
+                <ul class="mt-4 flex flex-wrap gap-2" aria-label="Tecnologías">
+                  <li class="rounded-full bg-white/5 px-3 py-1 text-xs font-medium text-brand">HTML5</li>
+                  <li class="rounded-full bg-white/5 px-3 py-1 text-xs font-medium text-brand">CSS3</li>
+                  <li class="rounded-full bg-white/5 px-3 py-1 text-xs font-medium text-brand">Bootstrap 5</li>
+                  <li class="rounded-full bg-white/5 px-3 py-1 text-xs font-medium text-brand">JavaScript</li>
+                  <li class="rounded-full bg-white/5 px-3 py-1 text-xs font-medium text-brand">PHP</li>
+                  <li class="rounded-full bg-white/5 px-3 py-1 text-xs font-medium text-brand">MySQL</li>
                 </ul>
-                <div class="project__links">
-                  <a href="https://github.com/Julieta-Andrea-Cardozo/programacion_WEB" target="_blank" rel="noopener">Repositorio</a>
-                  <a href="https://julieta-andrea-cardozo.github.io/programacion_WEB/" target="_blank" rel="noopener">Demo</a>
+                <div class="mt-6 flex gap-3">
+                  <a
+                    class="inline-flex items-center gap-1 rounded-lg border border-white/15 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:bg-white/10"
+                    href="https://github.com/Julieta-Andrea-Cardozo/programacion_WEB"
+                    target="_blank"
+                    rel="noopener"
+                    >Repositorio</a
+                  >
+                  <a
+                    class="inline-flex items-center gap-1 rounded-lg bg-brand px-4 py-2 text-sm font-semibold text-white transition hover:bg-branddark"
+                    href="https://julieta-andrea-cardozo.github.io/programacion_WEB/"
+                    target="_blank"
+                    rel="noopener"
+                    >Demo</a
+                  >
                 </div>
               </div>
             </article>
 
-            <article class="project">
+            <article class="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-slate-900 shadow-xl transition hover:border-brand/50">
               <img
+                class="h-48 w-full object-cover transition duration-300 group-hover:scale-[1.02]"
                 src="img/tp4.jpg"
                 width="1200"
                 height="750"
                 loading="lazy"
                 alt="Pokédex con tarjetas de Pokémon que muestran imagen, número y tipo, obtenidas de la PokéAPI"
               />
-              <div class="project__body">
-                <h3>Mini apps con JavaScript</h3>
-                <p>
+              <div class="flex flex-1 flex-col p-6">
+                <h3 class="font-display text-xl font-bold text-white">Mini apps con JavaScript</h3>
+                <p class="mt-3 text-sm leading-relaxed text-slate-400">
                   Tres aplicaciones interactivas: un catálogo con 4 filtros combinados en tiempo
                   real, una lista de tareas con contador y una Pokédex que consume la PokéAPI con
                   búsqueda y manejo de errores.
                 </p>
-                <p class="project__role">
-                  <strong>Mi rol:</strong> Proyecto individual. Programé toda la lógica con
+                <p class="mt-3 text-sm text-slate-400">
+                  <strong class="text-slate-200">Mi rol:</strong> Proyecto individual. Programé toda la lógica con
                   JavaScript ES6+, Fetch API y async/await.
                 </p>
-                <ul class="tags" aria-label="Tecnologías">
-                  <li>JavaScript ES6+</li>
-                  <li>Fetch API</li>
-                  <li>HTML5</li>
-                  <li>CSS Grid</li>
+                <ul class="mt-4 flex flex-wrap gap-2" aria-label="Tecnologías">
+                  <li class="rounded-full bg-white/5 px-3 py-1 text-xs font-medium text-brand">JavaScript ES6+</li>
+                  <li class="rounded-full bg-white/5 px-3 py-1 text-xs font-medium text-brand">Fetch API</li>
+                  <li class="rounded-full bg-white/5 px-3 py-1 text-xs font-medium text-brand">HTML5</li>
+                  <li class="rounded-full bg-white/5 px-3 py-1 text-xs font-medium text-brand">CSS Grid</li>
                 </ul>
-                <div class="project__links">
-                  <a href="https://github.com/Julieta-Andrea-Cardozo/trabajo-practico-N4" target="_blank" rel="noopener">Repositorio</a>
-                  <a href="https://julieta-andrea-cardozo.github.io/trabajo-practico-N4/" target="_blank" rel="noopener">Demo</a>
+                <div class="mt-6 flex gap-3">
+                  <a
+                    class="inline-flex items-center gap-1 rounded-lg border border-white/15 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:bg-white/10"
+                    href="https://github.com/Julieta-Andrea-Cardozo/trabajo-practico-N4"
+                    target="_blank"
+                    rel="noopener"
+                    >Repositorio</a
+                  >
+                  <a
+                    class="inline-flex items-center gap-1 rounded-lg bg-brand px-4 py-2 text-sm font-semibold text-white transition hover:bg-branddark"
+                    href="https://julieta-andrea-cardozo.github.io/trabajo-practico-N4/"
+                    target="_blank"
+                    rel="noopener"
+                    >Demo</a
+                  >
                 </div>
               </div>
             </article>
-
           </div>
         </div>
       </section>
 
-      <section id="habilidades" class="section">
-        <div class="container narrow">
-          <h2>Habilidades</h2>
-          <ul class="skills">
-            <li>HTML5 semántico</li>
-            <li>CSS3 (Flexbox, Grid)</li>
-            <li>JavaScript ES6+</li>
-            <li>React</li>
-            <li>Tailwind CSS</li>
-            <li>Bootstrap 5</li>
-            <li>PHP</li>
-            <li>MySQL / PostgreSQL</li>
-            <li>APIs REST</li>
-            <li>Git y GitHub</li>
-            <li>Figma</li>
-            <li>Accesibilidad web</li>
-            <li>Scrum y Trello</li>
+      <section id="habilidades" class="border-t border-white/5">
+        <div class="mx-auto max-w-3xl px-5 py-16 sm:py-20">
+          <h2 class="font-display text-3xl font-bold text-white">Habilidades</h2>
+          <ul class="mt-6 flex flex-wrap gap-2.5">
+            <li class="rounded-lg border border-white/10 bg-slate-900 px-4 py-2 text-sm font-medium text-slate-200">HTML5 semántico</li>
+            <li class="rounded-lg border border-white/10 bg-slate-900 px-4 py-2 text-sm font-medium text-slate-200">CSS3 (Flexbox, Grid)</li>
+            <li class="rounded-lg border border-white/10 bg-slate-900 px-4 py-2 text-sm font-medium text-slate-200">JavaScript ES6+</li>
+            <li class="rounded-lg border border-white/10 bg-slate-900 px-4 py-2 text-sm font-medium text-slate-200">React</li>
+            <li class="rounded-lg border border-white/10 bg-slate-900 px-4 py-2 text-sm font-medium text-slate-200">Tailwind CSS</li>
+            <li class="rounded-lg border border-white/10 bg-slate-900 px-4 py-2 text-sm font-medium text-slate-200">Bootstrap 5</li>
+            <li class="rounded-lg border border-white/10 bg-slate-900 px-4 py-2 text-sm font-medium text-slate-200">PHP</li>
+            <li class="rounded-lg border border-white/10 bg-slate-900 px-4 py-2 text-sm font-medium text-slate-200">MySQL / PostgreSQL</li>
+            <li class="rounded-lg border border-white/10 bg-slate-900 px-4 py-2 text-sm font-medium text-slate-200">APIs REST</li>
+            <li class="rounded-lg border border-white/10 bg-slate-900 px-4 py-2 text-sm font-medium text-slate-200">Git y GitHub</li>
+            <li class="rounded-lg border border-white/10 bg-slate-900 px-4 py-2 text-sm font-medium text-slate-200">Figma</li>
+            <li class="rounded-lg border border-white/10 bg-slate-900 px-4 py-2 text-sm font-medium text-slate-200">Accesibilidad web</li>
+            <li class="rounded-lg border border-white/10 bg-slate-900 px-4 py-2 text-sm font-medium text-slate-200">Scrum y Trello</li>
           </ul>
         </div>
       </section>
 
-      <section id="contacto" class="section section--alt">
-        <div class="container narrow contact">
-          <h2>Contacto</h2>
-          <p>¿Tenés una propuesta o querés charlar sobre un proyecto? Escribime.</p>
-          <ul class="contact__list">
-            <li><span>Email</span><a href="mailto:julietacardozo764@gmail.com">julietacardozo764@gmail.com</a></li>
-            <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/julieta-cardozo-dev" target="_blank" rel="noopener">linkedin.com/in/julieta-cardozo-dev</a></li>
-            <li><span>GitHub</span><a href="https://github.com/Julieta-Andrea-Cardozo" target="_blank" rel="noopener">github.com/Julieta-Andrea-Cardozo</a></li>
+      <section id="contacto" class="border-t border-white/5 bg-slate-900/40">
+        <div class="mx-auto max-w-3xl px-5 py-16 sm:py-20">
+          <h2 class="font-display text-3xl font-bold text-white">Contacto</h2>
+          <p class="mt-3 text-slate-400">¿Tenés una propuesta o querés charlar sobre un proyecto? Escribime.</p>
+          <ul class="mt-6 space-y-3">
+            <li class="flex items-center gap-3">
+              <span class="w-20 text-sm font-semibold text-slate-300">Email</span>
+              <a class="text-brand transition hover:text-fuchsia-300" href="mailto:julietacardozo764@gmail.com">julietacardozo764@gmail.com</a>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-20 text-sm font-semibold text-slate-300">LinkedIn</span>
+              <a class="text-brand transition hover:text-fuchsia-300" href="https://www.linkedin.com/in/julieta-cardozo-dev" target="_blank" rel="noopener">linkedin.com/in/julieta-cardozo-dev</a>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-20 text-sm font-semibold text-slate-300">GitHub</span>
+              <a class="text-brand transition hover:text-fuchsia-300" href="https://github.com/Julieta-Andrea-Cardozo" target="_blank" rel="noopener">github.com/Julieta-Andrea-Cardozo</a>
+            </li>
           </ul>
-          <a class="btn btn--primary" href="cv/Cardozo_Julieta_CV.pdf" download>Descargar CV (PDF)</a>
+          <a
+            class="mt-8 inline-block rounded-xl bg-brand px-6 py-3 font-semibold text-white shadow-lg shadow-brand/30 transition hover:bg-branddark"
+            href="cv/Cardozo_Julieta_CV.pdf"
+            download
+            >Descargar CV (PDF)</a
+          >
         </div>
       </section>
     </main>
 
-    <footer class="footer">
-      <div class="container">© 2026 Julieta Cardozo</div>
+    <footer class="border-t border-white/5">
+      <div class="mx-auto max-w-6xl px-5 py-6 text-sm text-slate-500">© 2026 Julieta Cardozo</div>
     </footer>
   </body>
 </html>
